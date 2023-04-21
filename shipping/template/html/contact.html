@@ -1,0 +1,86 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block title %}
+    
+<title>{{sitedetail.Website}}</title>
+
+{% endblock title %}
+ {% block link %}
+
+
+
+    <link rel="stylesheet" href=" {% static 'css/contact.css' %}">
+ {% endblock link %}
+     
+
+
+{% block trans %}
+    
+ 
+    <style>
+        .linkholder a:nth-child(4){
+     color: red;
+        }
+    </style>
+    <section class="slide__con">
+<div class="con__HOlider">
+<div>
+    <h2>Contact  {{sitedetail.Website}} shipping world wild </h2>
+    <h5>{{sitedetail.Website}} Logistics can provide you with solution tailored <br> to your need anyday anytime</h5>
+    <a href="?id=#contact" style="border: 2px solid rgba(179, 12, 12, 0.027); border-radius: 9px; color: white; padding: 22px; font-variant: small-caps; font-size: 30px; background-color: red;">CONTACT US</a>
+   
+</div>
+</div>
+    </section>
+    
+
+<section id='contact' class="asd__section" >
+<div class="main__detail">
+    <b> <i class="bi bi-map"></i> location: {{sitedetail.address}}</b>
+    <b><i class="bi bi-telephone"></i> PhoneNumber  :  {{sitedetail.cphonenum}}</b>
+    <b><i class="bi bi-envelope"></i> Email: {{sitedetail.cpEmail}}</b>
+    
+</div>
+
+<div>
+
+    <form action="" method="get">
+       <span>
+
+           <input type="text" name="" id="" placeholder="Enter Your FirstName">
+           <input type="text" name="" id="" placeholder="Enter Your LastName">
+       </span>
+            <input type="email" name="" id="" placeholder="Enter Your Email">
+            <input type="text" name="" id="" placeholder="Enter Your Message">
+      <button type="submit"> Send Message</button>
+    </form>
+</div>
+</section>
+
+
+
+<section class="Year__funtion">
+    <main class="mian__conds">
+        <h2>we are Trusted Logistics Company Since 1993</h2>
+        <span>
+            <img src="{% static 'assets/img/images(18).png' %}" alt="">
+            <small>
+                <h4>world wild operation </h4>
+                <p>
+                    As a fully integrated international transport and distribution company, we arrange the transportation of cargo around the world. We use {{sitedetail.Website}} Logistics for a part of our domestic transportation, and have done so for more than a decade. Our company was established in 1947, and we have always made it a practice to perform due diligence before contracting with a service provider. When looking at a logistics provider, we like to know who they are, how they conduct business, if they’re financially sound, and if they are honorable</p>
+            </small>
+        </span>
+    </main>
+    <main class="boxIMg">
+        <img src="{% static 'assets/img/feature.jpg' %}" alt="">
+    </main>
+
+
+</section>
+
+
+
+     
+
+
+{% endblock trans %}

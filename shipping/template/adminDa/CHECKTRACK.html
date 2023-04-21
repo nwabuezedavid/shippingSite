@@ -1,0 +1,176 @@
+
+ 
+    {% extends 'adminDa/base.html' %}
+    {% load static %}
+    {% block title %}
+        
+    <title>ZXpress/ shipping detail</title>
+    
+    {% endblock title %}
+     {% block link %}
+    
+    
+        <link rel="stylesheet" href=" {% static 'css/checktrack.css' %}">
+     {% endblock link %}
+         
+    
+    
+    {% block trans %}
+    
+
+    <main class="sec-2">
+        {% if request.user.username %}
+        {% include 'adminDa/nav2.html' %}
+            {% else %}
+            <link rel="stylesheet" href="{% static '/css/nav.css ' %}">
+
+            {% include 'html/nav.html' %}
+        {% endif %}
+    
+
+
+    <section class="main___detail__tacking">
+
+         <center>
+             <img src="{% static 'assets/logo/images(18).png' %} " alt="">
+             <img src=" {{saveDetail.BarIMage.url}}" alt=""  >
+             <big>{{saveDetail.serialNumber}}</big>
+         </center>   
+        <main class="main__detail__infor_name">
+          
+            <div>
+                
+                <h3> Receiver Information</h3>
+                <div>
+                    
+            <span>
+                <b>Name:</b>
+                <b>{{saveDetail.product.reciShipperName}}</b>
+               
+                </span>
+            <span>
+                <b>Contact:</b>
+                <b>{{saveDetail.product.recPhoneNumber}}</b>
+               
+                </span>
+            <span>
+                <b>Email:</b>
+                <b>{{saveDetail.product.recEmail}}</b>
+
+               
+                </span>
+            <span>
+                <b>Address:</b>
+                <b>{{saveDetail.product.reciaddress}}</b>
+               
+                </span>
+            </div>
+            </div>
+            <div>
+                
+                <h3> Sender Information</h3>
+                <div>
+                    
+            <span>
+                <b>Name:</b>
+                <b>{{saveDetail.product.ShipperName}}</b>
+               
+                </span>
+            <span>
+                <b>Contact:</b>
+                <b>{{saveDetail.product.PhoneName}}PhoneName</b>
+               
+                </span>
+            <span>
+                <b>Email:</b>
+                <b>{{saveDetail.product.email}}</b>
+               
+                </span>
+            <span>
+                <b>Address:</b>
+                <b>{{saveDetail.product.shpperAddress}}</b>
+               
+                </span>
+            </div>
+            </div>
+          
+           
+        </main>
+        <main style="width: 100%; ">
+            <div class="main__detail__infor_name hshs" style="flex-direction: column; width: 100%;">
+                
+                <h3 class="" style="color: red; background-color: rgba(0,4,31); margin-top: 2%; width: 60%;"> More Information</h3>
+                <div>
+                    
+            
+            <span>
+                <b>Dispatch Location:</b>
+                <b>{{saveDetail.product.dispatchlocation}}</b>
+               
+                </span>
+            
+            <span>
+                <b>Dispatch Date:</b>
+                <b>{{saveDetail.product.dispatchdate}}</b>
+                
+            </span>
+            <span>
+                <b>Estimated Delivery Date:</b>
+                <b>{{saveDetail.product.EstimatedDeliveryDate}}</b>
+                
+                
+            </span>
+            <span>
+                <b>Statue:</b>
+                <b>{{saveDetail.product.status}}</b>
+                
+                
+            </span>
+            <span>
+                <b>Type Of Shippment:</b>
+                <b>{{saveDetail.product.typeofshipp}}</b>
+                
+                
+            </span>
+            <span>
+                <b>Goods Quatity:</b>
+                <b>{{saveDetail.product.quatity}}</b>
+                
+                
+            </span>
+            <span>
+                <b>Current  Location </b>
+                <b>{{saveDetail.product.currentlocation}}</b>
+                
+
+               
+                </span>
+            </div>
+            </div>
+        </main>
+        
+    </section>
+</main>
+
+<style>
+    footer{
+        display: none;
+    }
+    .main__sec{
+        min-width: 100%;
+        overflow-y: visible !important;
+     
+    }
+    .open__assistabnce{
+        display: none;  
+    }
+    .main___detail__tacking .main__detail__infor_name div {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    color: white;
+}
+</style>
+    {% endblock trans %}
+
+

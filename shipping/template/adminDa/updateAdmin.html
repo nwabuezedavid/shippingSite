@@ -1,0 +1,190 @@
+{% extends 'adminDa/base.html' %}
+
+{% load static %}
+{% block title %}
+
+<title>Admin</title>
+
+{% endblock title %}
+{% block link %}
+
+
+ <link rel="stylesheet" href=" {% static 'css/creatShipping.css' %}">
+{% endblock link %}
+
+{% block trans %}
+ 
+    <main class="sec-2">
+        {% include 'adminDa/nav2.html' %}
+
+    
+ 
+    
+
+<section class="main__body__tack">
+
+
+    <h1>CREATE SHIPPMENT DETAILS</h1>
+   <main class="Con__re">
+
+  <form action="" method="post">
+      {% csrf_token %}
+
+      
+     
+          
+<main class="form__sec">
+
+    <div>
+        <h2>Shippers Details</h2>
+        <span>
+            
+
+
+            <label for="">Shippers Name:</label>
+            <!-- <input name="ShipperName" type="text" placeholder="Shippers Name"> -->
+
+            {{form.ShipperName}}
+        </span>
+        <span>
+            
+
+
+            <label for="">Shippers Address:</label>
+            {{form.shpperAddressaddress}}
+        </span>
+        <span>
+            <label for="">Phone Number:</label>
+            {{form.PhoneName}}
+        </span>
+        <span>
+            <label for="">Email:</label>
+            {{form.email}}
+
+        </span>
+    </div>
+    <div>
+        <h2>Receiver's Details</h2>
+        <span>
+            <label for="">Receiver's Name:</label>
+            {{form.reciShipperName}}
+
+        </span>
+        <span>
+            <label for="">Receiver's Address:</label>
+            {{form.reciaddress}}
+
+        </span>
+        <span>
+            <label for=""> Receiver Phone Number:</label>
+            {{form.recPhoneNumber}}
+
+        </span>
+        <span>
+            <label for="">Receiver's Email:</label>
+            {{form.recEmail}}
+
+        </span>
+    </div>
+
+    <strong style="text-transform: uppercase;">You can Update the client goods Location at anytime and  make sure the detail are correct </strong>
+    <div>
+        <h2>Pickup Details</h2>
+        <h5>Current Status:</h5>
+        <span>
+            <label for="">Date/Time:</label>
+            {{form.dateTime}}
+
+        </span>
+        <span>
+            <label for="">Location:</label>
+            {{form.location}}
+        </span>
+        <span>
+            <label for="">Quatity:</label>
+            {{form.quatity}}
+
+        </span>
+        <span>
+            <label for="">Status:</label>
+            {{form.status}}
+            
+            
+        </span>
+        <span>
+            <label for="typeofshipp">Remarks:</label>
+            {{form.remark}}
+
+        </span>
+    </div>
+    <div>
+        <h2>Shippment  Details</h2>
+        <span>
+            <label for=""> dispatch location:</label>
+            {{form.dispatchlocation}}
+
+        </span>
+        <span>
+            <label for=""> dispatch date:</label>
+            {{form.dispatchdate}}
+
+        </span>
+        <span>
+            <label for=""> Estimated Delivery Date:</label>
+            {{form.EstimatedDeliveryDate}}
+
+        </span>
+        <span>
+            <label for="">current location:</label>
+            {{form.currentlocation}}
+
+        </span>
+        <span>
+            <label for="">Type of Shippment:</label>
+            {{form.typeofshipp}}
+
+        </span>
+        <span>
+            <label for="">Weight:</label>
+            {{form.weight }}
+
+        </span>
+        
+        
+            <div class="btn__CON">
+                <button name="" type="submit">UPDATE</button>
+                <a href="{% url 'owerDashboard' user.id %}">BACK</a>
+            </div>
+    </div>
+
+    
+</main>
+
+</form>
+</main>
+</section>
+
+
+</main>
+
+
+
+
+<style>
+    input, label{
+        text-transform: capitalize;
+    }
+</style>
+<style>
+    input, label{
+        text-transform: capitalize;
+    }
+    .main__sec{
+        overflow: auto;
+    }
+    input{
+        background-color: rgba(128, 128, 128, 0.294);
+        color: white;
+    }
+</style>
+{% endblock trans %}

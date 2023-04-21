@@ -1,0 +1,37 @@
+    {% load static %}
+
+
+
+<main class="sec-1">
+    <h3>Menu</h3>
+    <i class="bi bi-x  cose "></i>
+<ul>
+
+<a href="{% url 'owerDashboard' user.id %}">
+<i class="bi bi-door-open"></i>
+<small>Overview</small>
+</a>
+<a href="{% url 'adminCreate' user.id %}">
+<i class="bi bi-key"></i>
+<small>CREATE SHIPPING</small>
+</a>
+<a href="{% url 'chattingCus' user.id %}">
+
+<i class="bi bi-envelope"></i>
+<small> CUSTOMER SERVICE</small>
+</a>
+
+
+
+<a href="{% url 'ADminEditprofile' user.id %}">
+<i class="bi bi-gear"></i>
+<small>Manager</small>
+</a>
+<a href="{% url 'logoutUser' %}">
+<i class="bi bi-gear"></i>
+<small>Logout</small>
+</a>
+
+</ul>
+
+</main>

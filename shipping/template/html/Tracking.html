@@ -1,0 +1,78 @@
+
+    
+    {% extends 'html/base.html' %}
+    {% load static %}
+    {% block title %}
+    
+    <title>{{sitedetail.Website}}-Tracking</title>
+ 
+  {% endblock title %}
+    {% block link %}
+    
+ 
+     <link rel="stylesheet" href=" {% static 'css/logistic_Home.css' %}">
+  {% endblock link %}
+    {% block trans %}
+
+    
+    <section class="slide__con sdfff" >
+        <style>
+            .linkholder a:nth-child(2){
+         color: red;
+            }
+        </style>
+<div class="con__HOlider">
+<div>
+    <h2>welcome!! to {{sitedetail.Website}} shipping</h2>
+    <h5>Please Enter Your tracking code  </h5>
+    <form action="" method="POST">
+{% csrf_token %}
+        <input type="text" placeholder="Enter Your Tacking Code" name="trackerCode">
+        <button type="submit" style="padding: 3px; background-color: red; cursor: pointer;"> Submit</button>
+    </form>
+    <h1 >Example: <sup>5g576gh6</sup></h1>
+
+</div>
+</div>
+    </section>
+    
+ 
+    
+    <section class="Year__funtion">
+        <main class="mian__conds">
+            <h2>we are Trusted Logistics Company Since 1993</h2>
+            <span>
+                <img src="{% static 'assets/img/images(18).png' %}" alt="">
+                <small>
+                    <h4>world wild operation </h4>
+                    <p>
+                        As a fully integrated international transport and distribution company, we arrange the transportation of cargo around the world. We use {{sitedetail.Website}} Logistics for a part of our domestic transportation, and have done so for more than a decade. Our company was established in 1947, and we have always made it a practice to perform due diligence before contracting with a service provider. When looking at a logistics provider, we like to know who they are, how they conduct business, if they’re financially sound, and if they are honorable</p>
+                </small>
+            </span>
+        </main>
+        <main class="boxIMg">
+            <img src="{% static 'assets/img/feature.jpg' %}" alt="">
+        </main>
+
+
+    </section>
+
+
+    
+
+
+  
+ 
+  
+
+
+
+
+<section style="margin-top: 12%;">
+<img src=" {% static '/assets/BTlAND/map.png' %}" alt="" style="width: 100%; height: 50vh;">
+
+</section>
+
+
+    
+{% endblock trans %}

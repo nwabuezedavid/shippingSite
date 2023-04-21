@@ -1,0 +1,83 @@
+
+{% extends 'adminDa/base.html' %}
+{% load static %}
+{% block title %}
+
+<title>Admin</title>
+
+{% endblock title %}
+{% block link %}
+
+
+
+ <link rel="stylesheet" href=" {% static 'css/dashboad.css' %}">
+{% endblock link %}
+{% block trans %}
+
+
+<style>
+    .linkholder a:nth-child(1){
+ color: red;
+    }
+    
+</style>
+   
+
+    
+
+
+    {% for items in items  %}
+        
+  
+    <section class="form__dispaly">
+        <main>
+        
+        <center>
+        
+            <h2>Client Details</h2>
+        </center>
+        
+        
+            <div class="header__z">
+                <b>#</b>
+                <b>Name</b>
+                <b> Email</b>
+                <b>Goods location</b>
+                <b> current  </b>
+                <b> Date  </b>
+                <b> Status </b>
+                <big>Action</big>
+            </div>
+            <div class="child__con">
+                <b>{{items.id }}</b>
+                <b>{{items.product.reciShipperName}}</b>
+                <a href="{% url 'AdmincheckCode' items.id %}" >view</a>
+                <b>{{items.product.reciaddress}}</b>
+                <b> {{items.product.dispatchlocation}} </b>
+                <b> {{items.product.status}}  </b>
+                <big>
+                    <a href="{% url 'delectItem' items.id %}"   style="background-color: cyan; display: flex; align-self: center; padding: 9px;">Edite</i></a>
+                    <a href="{% url 'delectItem' items.id %}" >Delete</a>
+
+                </big>
+            </div>
+        </main>
+        
+        
+        
+          </section>
+         
+
+
+
+
+    
+                             
+                               
+    {% endfor %}
+   
+    
+
+
+
+{% endblock trans %}

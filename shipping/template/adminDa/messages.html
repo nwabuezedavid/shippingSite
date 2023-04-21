@@ -1,0 +1,15 @@
+{% if messages %}
+    
+{% for emailMessage in messages  %}
+<h1 class="messages" style="padding: 12px; font-size: 16px ; color:rgba(248, 23, 23, 0.856); background-color: rgba(255, 255, 255, 0.952);">{{emailMessage}}</h1>
+{% endfor %}
+{% endif %}
+
+<script>
+const messages = document.querySelector('.messages')
+if (messages.textContent) {
+    setTimeout(() => {
+        messages.style.display="none"
+    }, 4000);
+}
+</script>

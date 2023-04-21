@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin </title>
+  <link rel="shortcut icon" href= " {{sitedetail.logo.url}}" type="image/x-icon" style="border-radius: 30%;">
+
+    <link rel="stylesheet" href="{% static 'bootstrap-icons-1.8.3/bootstrap-icons.css'%}">
+    
+    <link rel="stylesheet" href="{%static 'css/investmnetPlanedit.css'%} ">
+    <link rel="stylesheet" href="{% static '/useniveral/uni.css'%} ">
+</head>
+<body>
+    <section class="main__sec">
+      {% include 'adminDa/nav.html' %}
+
+<main class="sec-2">
+  {% include 'adminDa/nav2.html' %}
+
+            <div class=" main-two-con">
+                <div class="top-welcome">
+                    <h2 >DASHBOARD <i class="bi bi-arrow-right"></i> </h2>
+                    
+                </div>
+                   
+                    <div class="dp-pending">
+                      
+                        <div class="dp-pending-con fd">
+            
+                            <big>Reciever Name:</big>
+                            <big>Date: </big>
+                            <big>Current Location. :</big>
+                            <big>Status </big>
+                            <big>Weight </big>
+                            
+                        </div>
+                        {% for items in items  %}
+                        <div class="dp-pending-con fd" style="position: relative; min-height: 120px;">
+            
+                          <a style="color: rgba(255, 255, 255, 0.562);  text-transform: uppercase; border-bottom: 2px solid white; align-self: center; display: flex; " href="{% url 'AdmincheckCode' items.serialNumber %}">{{items.product.reciShipperName  }}</a>
+
+                          <big> {{items.product.dateTime }} </big>
+                <big>                        {{items.product.reciaddress }}
+                </big>
+                <big>{{items.product.status}}</big>
+                <big>{{items.product.weight}}</big>
+                <span style="position: absolute; right: 20px;
+                bottom: 0;">
+<a href="{% url 'delectItem' items.id %}" style="color:red; font-size: 19px; border-bottom: 2px solid ;">delete</a>
+<a href="{% url 'asUpdate' items.id %}" style="color: rgba(0, 4,31); font-size: 19px; border-bottom: 2px solid ;">edit</a>
+                </span>
+                        </div>
+                        
+                          
+                        {% endfor %}
+                          
+                    
+                      
+                        
+                    
+                        
+                    
+                       
+                        
+                    </div>
+                    <span style="width: 100%; height: fit-content; padding: 22px; display: flex; align-items: center; justify-content: center;" class="paginate">
+                        <a href="" class="pg"> 1</a>
+                        <style>
+                            .paginate >*{
+                                width: fit-content;
+                                padding: 12px;
+                                background-color: black;
+                                margin-left: 12px;
+                            }
+                            .pg{
+                                background-color: white;
+                                color: red;
+                            }
+                        </style>
+                        <a href="">2</a>
+                        <a href="">next</a>
+                        <a href="">last</a>
+                    </span>
+            </div>
+        </main>
+    </section>
+    <script src="{%static 'js/userD.js'%}"></script>
+
+
+    
+    
+    <script src="../useniveral/uni.js" defer></script>
+
+
+</body>
+</html>

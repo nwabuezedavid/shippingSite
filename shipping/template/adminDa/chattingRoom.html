@@ -1,0 +1,129 @@
+
+{% extends 'adminDa/base.html' %}
+{% load static  %}
+{% block title %}
+
+<title>Customer Service</title>
+
+{% endblock title %}
+{% block link %}
+
+
+ <link rel="stylesheet" href="{%static '/css/chat-room.css'%}">
+ <script src="{%static '/js/chattings.js'%} " defer></script>
+{% endblock link %}
+{% block trans %}
+<main class="sec-2">
+    {% if request.user.username %}
+        
+
+    
+    {% else %}
+    <link rel="stylesheet" href="{% static '/css/nav.css'%}">
+
+
+  {% include 'html/nav.html' %}
+<style>
+    .nav {
+    background-color: white;
+    color: rgb(1, 1, 27);
+    }
+</style>
+    {% endif %}
+
+
+
+<main class="sec-2">
+    {% if request.user.username %}
+
+    {% include 'adminDa/nav2.html' %}
+    
+        
+    {% endif %}
+        
+
+    <h5 class=" idUser" style="display: none;">{{idroom.roomid}}</h5>
+  <h5 class="isactive" style="display: none;">{{request.user.id}}</h5>
+            <section class="room-con">
+
+                <div class="child-room  ch2">
+                <div class="room-top-ch2">
+                    <div>
+                
+                    <span>
+    <img src=" {% static 'assets/img/images(20).png'%}" alt="" class="friend-chat-person">
+                
+                       <b></b>
+                
+                    </span>
+                
+                    <big>Customer Service </big>
+                    <big class="active-cs">online now </big>
+                    {% if  not request.user.username %}
+
+                    <div class="friend-sending">
+                        <p>
+                            <h4 style="color: white;">One of our Team Will Attend to You Shortly OR you can Send Us an Email with Your name Attach</h4>
+                        </p>
+                    </div>
+                {% else %}
+                <div class="user-sending sdddda">
+                    <h4 style="color: white;">One of our Team Will Attend to You Shortly OR you can Send Us an Email with Your name Attach</h4>
+    
+                </div>
+                {% endif %}
+         
+                </div>
+            
+                
+                </div>
+                
+                <div class="message-con">
+              
+                
+                
+                
+                
+                
+                </div>
+                
+                <form action="" method="POST" class="main-room-message-form">
+                    {% csrf_token %}
+                    <input type="text" class="token" value="{{csrf_token}}" name="" id="" hidden style="display: none;">
+                    <input type="text" style="color: white;" name = 'Clientmessage' class="inputmessage" placeholder="write your message.....">
+                   
+                    <button type="submit" class="btnsub"> <i class="bi bi-send">87</i></button>
+                </form>
+                </div>
+                
+                </section>            
+        </main>
+</main>
+
+
+
+
+
+
+<style>
+    .open__assistabnce{
+        display: none;
+    }
+    @media screen and (max-width:600px) {
+        .ch2 .room-top-ch2 div {
+    display: flex;
+    align-items: end;
+    position: relative;
+    margin-top: 2pc;
+}
+.message-con {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    overflow-x: hidden;
+}
+    }
+</style>
+{% endblock trans %}

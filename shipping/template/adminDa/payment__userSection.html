@@ -1,0 +1,122 @@
+{% extends 'adminDa/base.html' %}
+
+    {% load static %}
+    
+     
+    {% block trans %}
+<main class="sec-2">
+    {% include 'adminDa/nav2.html' %}
+
+         <div class="main-sec">
+             <div class="helder">
+                 
+                 <div>
+                     
+                     <p>
+                         id
+                        </p>
+                        {% for items in items  %}
+                    <b>
+                        {{forloop.counter }}
+                    </b>
+                    {% endfor %}
+                </div>
+
+                
+                <div>
+                    
+                    <p>
+                        username
+                    </p>
+                    {% for items in items  %}
+                    <a style="color: rgba(255, 255, 255, 0.562);  text-transform: uppercase; border-bottom: 2px solid white; align-self: center; display: flex; " href="{% url 'AdmincheckCode' items.serialNumber %}">s{{items.product.reciShipperName  }}</a>
+
+                    {% endfor %}
+                </div>
+                
+                
+               
+                
+                <div>
+                    
+                    <p>
+                        Current Address 
+                    </p>
+                    {% for items in items  %}
+                    <b>
+                        {{items.product.reciaddress }}
+                    </b>
+
+                    {% endfor %}
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.041); margin:12px ;">
+                    
+                    <p>
+                        status
+                    </p>
+                    {% for items in items  %}
+                    <b>
+                        active
+                        
+                    </b>
+                    <span style="display: flex; width: 120px;   border-radius: 12px; ">
+                        <a style="color: red;" href="{% url 'delectItem' items.id %}">delete</a>
+                        <a style="color: #f0efef; " href="{% url 'asUpdate' items.id %}" >Edit</a>
+                    </span>
+                    {% endfor %}
+                </div>
+                
+             </div>
+   
+           
+                 
+           
+         </div>  
+        </main>
+        <style>
+            .main-sec{
+                display: flex;
+                width: 100%;
+                /* overflow-x: hidden; */
+                align-items: center;
+                flex-direction: column;
+                text-transform: capitalize;
+            }
+
+
+.helder{
+                width: 100%;
+                justify-content: space-between;
+    display: flex;
+
+}
+.helder div >*:nth-child(1){
+    text-transform: uppercase;
+}
+.helder div >*{
+margin-top: 12px;
+}
+@media screen and (max-width:800px) {
+    .helder div >*{
+font-size: .9rem;
+margin-top: 12px;
+margin-bottom: 12px;
+justify-content: space-between;
+} 
+    .helder {
+display: flex;
+width: 100%;
+} 
+}
+.helder div{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5pc;
+    width: fit-content;
+}
+
+        </style>
+    {% endblock trans %}
+
+

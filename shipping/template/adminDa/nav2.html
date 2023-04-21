@@ -1,0 +1,67 @@
+<div class="sec2-main">
+        
+    <i class="bi bi-justify click__sec__1">w</i>
+    <form action="" method="POST" class="search__sa">
+        {% csrf_token %}
+        <input type="text" list="sldyu" name="search"  id="sld">
+       <datalist id="sldyu" >
+           
+         
+               
+           <option value="chattingCus">
+customer service
+             
+            </option>
+               
+           
+               
+           <option value="ADminEdit">
+
+             Site Manager
+            </option>
+               
+           <option value="ADminEditprofile">
+
+            profile
+            </option>
+           
+
+       </datalist>
+       <button type="submit">
+
+           <i class="bi bi-search"></i>
+       </button>
+</form>
+<span style="display: flex; "> 
+<b>
+    <i class="bi bi-envelope"></i>
+    <small>.</small>
+</b>
+<div class="fit__accsett">
+
+
+<img src="{{sitedetail.logo.url}}" alt="" height="129px" class="toogle__fixed__top">
+<div  class="fixed" style="background: rgba(0, 4,31);">
+    <big>
+        <img src="{{sitedetail.logo.url}}" alt="" height="129px">
+        <h3>{{request.user.username}}</h3>
+       
+    </big>
+    <big>
+        <a href="{% url 'ADminEditprofile' user.id %}">
+            <i class="bi bi-person"></i>
+            <b>My Profile</b>
+        </a>
+       
+        <a href="{% url 'ADminEdit' user.id %}">
+            <i class="bi bi-gear "></i>
+            <b>Account Setting</b>
+        </a>
+        <a href="{% url 'logoutUser' %}">
+            <i class="bi bi-toggle-on "></i>
+            <b>logout </b>
+        </a>
+    </big>
+</div></div>
+</span>
+</div>

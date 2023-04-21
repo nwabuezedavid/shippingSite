@@ -1,0 +1,66 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block title %}
+
+<title>{{sitedetail.Website}}-Blog</title>
+
+{% endblock title %}
+{% block link %}
+
+
+
+ <link rel="stylesheet" href=" {% static 'css/blog.css' %}">
+{% endblock link %}
+{% block trans %}
+    <section class="slide__con">
+<div class="con__HOlider">
+<div>
+    <h2>EXPLORE OUR SERVICE </h2>
+    <h5>{{sitedetail.Website}} Logistics can provide you with solution tailored <br> to your need anyday anytime</h5>
+    <a href="?id=#contact" aria-disabled="true" style="border: 2px solid rgba(179, 12, 12, 0.027); border-radius: 9px; color: white; padding: 22px; font-variant: small-caps; font-size: 30px; background-color: red;">BLOG</a>
+    
+</div>
+</div>
+    </section>
+    <style>
+        .linkholder a:nth-child(3){
+     color: red;
+        }
+    </style>
+
+
+<link rel="stylesheet" href=" {% static '/css/blogd.css' %}" >
+
+
+
+<section class="Year__funtion">
+    <main class="mian__conds">
+            <h2>we are Trusted Logistics Company Since 1993</h2>
+            <span>
+                <img src="{% static 'assets/img/images(18).png' %}" alt="">
+                <small>
+                    <h4>world wild operation </h4>
+                    <p>
+                        As a fully integrated international transport and distribution company, we arrange the transportation of cargo around the world. We use {{sitedetail.Website}} Logistics for a part of our domestic transportation, and have done so for more than a decade. Our company was established in 1947, and we have always made it a practice to perform due diligence before contracting with a service provider. When looking at a logistics provider, we like to know who they are, how they conduct business, if they’re financially sound, and if they are honorable</p>
+                    </small>
+                </span>
+            </main>
+        <main class="boxIMg">
+            <img src="{% static 'assets/img/feature.jpg' %}" alt="">
+        </main>
+
+        
+    </section>
+
+    {% include 'html/teamworker.html' %}
+
+    
+    <style>
+        .secp .child__con{
+            width: 400px;
+        }
+    </style>
+    
+    {% endblock trans %}
+
+    

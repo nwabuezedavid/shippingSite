@@ -1,0 +1,168 @@
+
+{% extends 'adminDa/base.html' %}
+
+{% load static %}
+{% block title %}
+
+<title>Admin</title>
+
+{% endblock title %}
+{% block link %}
+
+
+ <link rel="stylesheet" href=" {% static 'css/creatShipping.css' %}">
+{% endblock link %}
+{% block trans %}
+    <link rel="stylesheet" href="../css\creatShipping.css">
+ 
+    <main class="sec-2">
+        {% include 'adminDa/nav2.html' %}
+
+              
+                <section class="main__body__tack">
+                
+                
+                    <h1>CREATE SHIPPMENT DETAILS</h1>
+                   <main class="Con__re">
+                
+                  <form action="" method="post">
+                      {% csrf_token %}
+                <main class="form__sec">
+                
+                    <div>
+                        <h2>Shippers Details</h2>
+                        <span>
+                            
+                
+                
+                            <label for="">Shippers Name:</label>
+                            <input name="ShipperName" type="text"  required placeholder="Shippers Name">
+                        </span>
+                        <span>
+                            
+                
+                
+                            <label for="">Shippers Address:</label>
+                            <input name="shpperAddressaddress" type="text" required placeholder="Shippers Address">
+                        </span>
+                        <span>
+                            <label for="">Phone Number:</label>
+                            <input name="PhoneName" type="number" required placeholder="Phone Number: -1()">
+                        </span>
+                        <span>
+                            <label for="">Email:</label>
+                            <input name="email" type="email" required placeholder="Email Address:">
+                        </span>
+                    </div>
+                    <div>
+                        <h2>Receiver's Details</h2>
+                        <span>
+                            <label for="">Receiver's Name:</label>
+                            <input name="reciShipperName" type="text" required placeholder="Receiver's Name">
+                        </span>
+                        <span>
+                            <label for="">Receiver's Address:</label>
+                            <input name="reciaddress" type="text" required placeholder="Receiver's Address">
+                        </span>
+                        <span>
+                            <label for=""> Receiver Phone Number:</label>
+                            <input name="recPhoneNumber" type="number" required placeholder=" Receiver's Phone Number: -1()">
+                        </span>
+                        <span>
+                            <label for="">Receiver's Email:</label>
+                            <input name="recEmail" type="email" required placeholder="Receiver's Email Address:">
+                        </span>
+                    </div>
+                
+                    <strong style="text-transform: uppercase;">You can Update the client goods Location at anytime and  make sure the detail are correct </strong>
+                    <div>
+                        <h2>Pickup Details</h2>
+                        <h5>Current Status:</h5>
+                        <span>
+                            <label for="">Date/Time:</label>
+                            <input name="dateTime" type="datetime-local" >
+                        </span>
+                        <span>
+                            <label for="">Location:</label>
+                            <input name="location" type="text" required placeholder="Enter the good Location">
+                        </span>
+                        <span>
+                            <label for="">Quatity:</label>
+                            <input name="quatity" type="text" required placeholder="Quatity">
+                        </span>
+                        <span>
+                            <label for="">Status:</label>
+                            <select name="status" id="" style="width: 90%;">
+                                <option value="">__select__Status__</option>
+                                <option value="Pickup">Pick Up</option>
+                                <option value="active">Active</option>
+                                <option value="active">In Transit</option>
+                            </select>
+                        </span>
+                        <span>
+                            <label for="typeofshipp">Remarks:</label>
+                            <input name="remark" type="text" required placeholder="Remark ">
+                        </span>
+                    </div>
+                    <div>
+                        <h2>Shppment  Details</h2>
+                        <span>
+                            <label for=""> dispatch location:</label>
+                            <input name="dispatchlocation" type="text" required placeholder=" enter the dispatchlocation">
+                        </span>
+                        <span>
+                            <label for=""> dispatch date:</label>
+                            <input name="dispatchdate" type="datetime-local" required placeholder=" enter the dispatchdate">
+                        </span>
+                        <span>
+                            <label for=""> Estimated Delivery Date:</label>
+                            <input name="EstimatedDeliveryDate" type="datetime-local" required placeholder=" enter the EstimatedDeliveryDate">
+                        </span>
+                        <span>
+                            <label for="">current location:</label>
+                            <input name="currentlocation" type="text" required placeholder=" enter the currentlocation">
+                        </span>
+                        <span>
+                            <label for="">Type of Shippment:</label>
+                            <input name="typeofshipp" type="text" required placeholder=" Type of Shippment">
+                        </span>
+                        <span>
+                            <label for="">Weight:</label>
+                            <input name="weight" type="text" required placeholder="Weight">
+                        </span>
+                        
+                        
+                            <div class="btn__CON">
+                                <button name="" type="submit">CREATE</button>
+                                <a href="{% url 'owerDashboard' user.id %}">BACK</a>
+                            </div>
+                    </div>
+                
+                    
+                </main>
+                
+                </form>
+                </main>
+                </section>
+            </main>
+ 
+    
+
+
+
+
+
+<style>
+    input, label{
+        text-transform: capitalize;
+    }
+    .main__sec{
+        overflow: auto;
+    }
+    input{
+        background-color: rgba(128, 128, 128, 0.294);
+        color: white;
+    }
+</style>
+
+{% endblock trans %}

@@ -1,0 +1,85 @@
+
+  {% extends 'adminDa/base.html' %}
+
+    {% load static %}
+    
+    {% block title %}
+
+<title>Admin Edit Site</title>
+
+{% endblock title %}
+{% block link %}
+
+
+
+ <link rel="stylesheet" href=" {% static 'css/profile.css' %}">
+{% endblock link %}
+    
+    {% block trans %}
+      
+    <main class="sec-2">
+    {% include 'adminDa/nav2.html' %}
+
+    
+    
+            <div class=" main-two-con">
+                <main>
+                    {% include 'adminDa/profileheaderpic.html' %}
+            
+                   
+                    <div class="main-two-con-child-two">
+                        {% include 'adminDa/profileLink.html' %}
+                        
+                        <div class="main-two-con-child-two-con-one" style="position: relative;" >
+                            
+                           
+                            <form action="" method="POST" enctype="multipart/form-data">
+                                <h3></h3>
+                                
+                                {% csrf_token %}
+                               
+                                    
+                            <big>
+                                
+                                
+                                <span>
+                                    <big style="display: none;">
+                                        {{forms.profileImg}}
+                                        {{forms.user.username}}
+                                   
+                                    </big>
+                                    <label for="firstname">fisrtname</label>
+                                    <input type="text" id="firstname" name="firstname" value="{{request.user.first_name}}" placeholder="firstname">
+                                </span>
+                                <span>
+                                    <label for="lastname">lastname</label>
+                                    <input type="text" id="lastname" name="lastname" value="{{request.user.last_name}}" placeholder="lastname">
+                                </span>   
+                               
+                                </big>
+                                
+                                <span>
+                                    <label for="emails">Username</label>
+                                    <input type="text" id="emails" name="username"  value="{{request.user.username }}" placeholder="Email">
+                                </span>
+                                <span>
+                                    <label for="email">email</label>
+                                    <input type="email" id="email" name="email"  value="{{request.user.email }}" placeholder="Email">
+                                </span>
+                                <span>
+                                    <label for="number">Enter Admin Pin  Before Updating</label>
+                                    <input type="number" id="number" name="pass"  placeholder="Password ">
+                                </span>
+                                <span>
+                                    <button type="submit" style="padding: 12px; background-color: red; color:white;">UPDATE</button>
+                                </span>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </main>
+               
+            </div> 
+        </main>
+        {% endblock trans %}
+  

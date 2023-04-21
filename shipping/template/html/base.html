@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    
+ 
+  {% endblock title %}
+    {% block link %}
+  {% endblock link %}
+  <link rel="stylesheet" href="{% static '/css/nav.css ' %}">
+     
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="shortcut icon" href= " {{sitedetail.logo.url}}" type="image/x-icon" style="border-radius: 30%;">
+  
+</head>
+<body>
+{% include 'html/nav.html' %}
+
+{% block trans %}
+    
+{% endblock trans %}
+{% include 'html/footer.html' %}
+
+<script src=" {% static 'js/logistic_Home.js' %} "></script>
+<style>
+@media screen and (max-width:700px) {
+  .slide__con{
+    margin-top: 9pc !important;
+  }
+  
+  }
+  @media (max-width: 890px){
+.intro main:last-child span {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+.bog__centera main div img {
+border-radius: 9px;
+width:  100%;
+margin-top: 2%;
+}
+.bog__centera main div a {
+border-radius: 9px;
+display: none;
+}
+body{
+  margin: 0% !important;
+  height: 100%;
+}
+.bog__centera main div {
+margin: 0px !important;
+}
+.bog__centera main div img {
+flex-grow: 1;
+flex-basis: 1;
+object-fit: cover;
+}
+}
+.bog__centera main div img{
+border-radius: 9px;
+}
+.Year__funtion .mian__conds span {
+flex-direction: column;
+align-items: flex-start;
+}
+.test__all__con .main__Testimony h5{
+  text-transform: uppercase;
+}
+.test__all__con .main__Testimony .semi__tes .child__con img {
+object-fit: scale-down;
+}
+.bog__centera{
+  text-transform: capitalize;
+}
+.bog__centera main div a {
+display: none;
+}
+.child__con img{
+  border-radius: 12px;
+  margin-left: 0;
+}
+</style>
+</body>
+</html>

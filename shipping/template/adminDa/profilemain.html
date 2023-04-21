@@ -1,0 +1,102 @@
+
+  {% extends 'adminDa/base.html' %}
+
+    {% load static %}
+    
+    {% block title %}
+
+<title>Admin Edit Site</title>
+
+{% endblock title %}
+{% block link %}
+
+
+
+ <link rel="stylesheet" href=" {% static 'css/profile.css' %}">
+{% endblock link %}
+    
+    {% block trans %}
+      
+    <main class="sec-2">
+    {% include 'adminDa/nav2.html' %}
+
+    
+    
+            <div class=" main-two-con">
+                <main>
+                    {% include 'adminDa/profileheaderpic2.html' %}
+            
+                   
+                    <div class="main-two-con-child-two">
+                        {% include 'adminDa/profileLink.html' %}
+                        
+                        <div class="main-two-con-child-two-con-one" style="position: relative;" >
+                            
+                           
+                            <form action="" method="POST" enctype="multipart/form-data">
+                                <h3></h3>
+                                
+                                {% csrf_token %}
+                               
+                                    
+                            <big>
+                                
+                                
+                                <span>
+                                    <big style="display: none;">
+                                        {sitedetail.logo.url}}
+                                        {sitedetail.Website}}
+                                   
+                                    </big>
+                                    <input type="file" id="id_profileImg" hidden style="display: none;"  name="logo" value="{{sitedetail.logo.url}}" >
+                                    <label for="firstname">Website Name</label>
+                                    <input type="text" id="firstname" name="Website" value="{{sitedetail.Website}}" placeholder="Website name">
+                                </span>
+                                <span>
+                                    <label for="lastname">Address</label>
+                                    <input type="text" id="lastname" name="address" value="{{sitedetail.address}}" placeholder="address">
+                                </span>   
+                                  
+                                </big>
+                                
+                                <span>
+                                    <label for="emails">Company Phone Number </label>
+                                    <input type="text" id="emails" name="cphonenum"  value="{{sitedetail.cphonenum}}" placeholder="Email">
+                                </span>
+                                <span>
+                                    <label for="emails">site  Discription</label>
+                                    <input type="text" id="emails" name="cpdiscri"  value="{{sitedetail.cpdiscri}}" placeholder="Email">
+                                </span>
+                                <span>
+                                    <label for="emails">site  key Word</label>
+                           
+                                    <input type="text" id="emails" name="cpkw"  value="{{sitedetail.cpkw}}" placeholder="Email">
+                                </span>
+                                <span>
+                                    <label for="emails"> Company url </label>
+                                    <input type="text" id="emails" name="cpurl"  value="{{sitedetail.cpurl}}" placeholder="Email">
+                                </span>
+                                
+                                <span>
+                                    <label for="emails">comapny Email</label>
+                                    <input type="email" id="emails" name="cpEmail"  value="{{sitedetail.cpEmail}}" placeholder="Email">
+                                </span>
+                                
+                               
+                                <span>
+                                    <label for="number">Enter Your Admin Pin Before Updating</label>
+                                    <input type="number" maxlength="4" id="number" name="pass"  placeholder="Password ">
+                                </span>
+                                <span>
+                                    <button type="submit" style="padding: 12px; background-color: red; color:white;">UPDATE</button>
+                                </span>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </main>
+               
+            </div> 
+        </main>
+        {% endblock trans %}
+  

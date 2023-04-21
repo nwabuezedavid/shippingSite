@@ -1,0 +1,53 @@
+{% load static %}
+
+
+<footer>
+
+    <main>
+        <h4>welcome to {{sitedetail.Website}} shipping </h4>
+        <p>When it comes to transportation logistics services, finding the right equipment for your products is a crucial component of successful shipments. Whether you’re shipping apples or x-ray machines, we’ll source the proper equipment and a driver with the appropriate credentials to ensure that your freight arrives at the right time, in the right condition.</p>
+    </main>
+    <section>
+
+        <div class="form__sus">
+            <center>
+                <h3>NEWSLETTER SUSCRIBE</h3>
+            </center>
+            <P>suscribe to our newsletter ans we will inform your about newset project and promotions.</P>
+            <form action="">
+                <input type="text" name="" id="" placeholder="ENTER YOUR EMAIL HERE....">
+                <button type="submit">SUsCRIBE</button>
+            </form>
+        </div>
+        <div class="link__q">
+            <center>
+                <h1>    QUICK LINKS</h1>
+            </center>
+            <SPAn>
+                <a href="/"> Home </a>
+
+                <a href="{% url 'tracking' %}" > Tracking</a>
+                <a href="{% url 'blog' %}"> Blog</a>
+                <a href="{% url 'contact' %}"> contact Us </a>
+                <a href="{% url 'service' %}"> Service</a>
+            </SPAn>
+        </div>
+        <div class="contasg">
+            <center><H1>Contact Us</H1></center>
+            <small>
+                <b>{{sitedetail.cphonenum}} </b>
+                <tt>mashallter New YORK</tt>
+                <strong>Call: {{sitedetail.cphonenum}}</strong>
+            <big>Email: {{sitedetail.cpEmail}}</big>
+            <span>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-instagram"></i>
+            </span>
+            </small>
+        </div>
+    </section>
+   <center>
+       <h3> Tracking 2022, All Right Reserved </h3>
+   </center>
+</footer>

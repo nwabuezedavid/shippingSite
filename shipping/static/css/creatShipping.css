@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+:root {
+  --back2:white;
+  --btn:rgb(22, 58, 156);
+  --conta:rgb(62, 62, 93);
+  --colte:rgba(0, 4, 13);
+}
+
+.bi-facebook {
+  color: blue;
+}
+
+.bi-twitter {
+  color: cyan;
+}
+
+.bi-instagram {
+  color: rgb(51, 30, 56);
+}
+
+body {
+  height: 1005;
+  overflow: auto;
+}
+
+nav {
+  position: relative;
+}
+
+.create__con {
+  position: absolute;
+  right: 12px;
+  margin: 22px;
+}
+.create__con a {
+  border: 2px solid white;
+  background-color: red;
+  color: white;
+  padding: 22px;
+  border-radius: 12px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: small;
+  padding: 7px;
+}
+
+.main__body__tack {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 22px;
+  margin-top: 100px;
+}
+.main__body__tack .Con__re {
+  display: flex;
+  width: 100%;
+}
+.main__body__tack .Con__re form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.main__body__tack .Con__re form .form__sec {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.main__body__tack .Con__re form .form__sec > * {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.main__body__tack .Con__re form .form__sec > * > * {
+  margin: 12px;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.main__body__tack .Con__re form .form__sec > * > * input {
+  width: 90%;
+  height: 50px;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+.btn__CON {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.btn__CON > * {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid rgba(220, 220, 220, 0.329);
+  background-color: var(--colte);
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+}
+.btn__CON button {
+  background-color: red;
+  border-radius: 9px;
+}/*# sourceMappingURL=creatShipping.css.map */

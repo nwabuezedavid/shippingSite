@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+}
+
+:root {
+  --back2:white;
+  --btn:rgb(22, 58, 156);
+  --conta:rgb(62, 62, 93);
+  --colte:rgba(0, 4, 13);
+}
+
+.bi-facebook {
+  color: blue;
+}
+
+.bi-twitter {
+  color: cyan;
+}
+
+.bi-instagram {
+  color: rgb(51, 30, 56);
+}
+
+.slide__con {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/BTlAND/contact-page-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.slide__con .con__HOlider {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 1%;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background-color: rgba(14, 11, 11, 0.322);
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+}
+.slide__con .con__HOlider div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+}
+.slide__con .con__HOlider div > * {
+  margin: 1%;
+}
+.slide__con .con__HOlider div h5 {
+  font-size: 128%;
+  color: rgb(255, 255, 255);
+}
+.slide__con .con__HOlider div h2 {
+  font-size: 45px !important;
+}
+.slide__con .con__HOlider div form {
+  display: flex;
+  width: 90%;
+  align-self: center;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+}
+.slide__con .con__HOlider div form button {
+  margin-left: 3px;
+  background-color: var(--colte);
+  color: white;
+  outline: none;
+  border: none;
+}
+.slide__con .con__HOlider div form input {
+  height: 100%;
+  width: 90%;
+  outline: none;
+  border: none;
+  padding: 12px;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h5, input {
+  text-transform: capitalize;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--colte);
+  padding: 7%;
+  color: white;
+}
+footer main {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+footer main h4 {
+  font-size: 30px;
+}
+footer main p {
+  color: gray;
+}
+footer section {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer section div {
+  width: 340px;
+  background-color: rgba(128, 128, 128, 0.137);
+  margin: 12px;
+  padding: 22px;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  flex-grow: 1;
+  max-height: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+footer section div > * {
+  margin: 11px;
+}
+footer section div h1, footer section div H1 {
+  display: flex;
+  font-size: small;
+}
+footer section .form__sus form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+footer section .form__sus form input {
+  width: 90%;
+  height: 70px;
+  background-color: rgba(128, 128, 128, 0.144);
+  border: none;
+  padding: 22px;
+  border-bottom: 2px solid white;
+}
+footer section .form__sus form button {
+  background-color: red;
+  color: white;
+  border: none;
+  margin-left: 7px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+footer section .link__q SPan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer section .link__q SPan a {
+  color: white;
+  font-size: large;
+  margin-top: 12px;
+  border-bottom: 2px solid white;
+  padding-bottom: 9px;
+}
+footer section .link__q SPan a::before {
+  content: "< ";
+}
+footer section .contasg small {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+footer section .contasg small b {
+  font-size: medium;
+}
+footer section .contasg small > * {
+  margin-top: 12px;
+}
+footer section .contasg span {
+  display: flex;
+  align-self: center;
+}
+footer section .contasg span i {
+  margin-left: 9px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.301);
+}
+
+.asd__section {
+  display: flex;
+  min-height: 40vh;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.asd__section div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  min-width: 300px;
+  align-items: center;
+  height: 300px;
+  margin: 12px;
+  background-color: whitesmoke;
+}
+.asd__section .main__detail {
+  align-items: flex-start;
+  padding-left: 4%;
+}
+.asd__section .main__detail b {
+  margin: 12px;
+  font-family: sans-serif;
+}
+.asd__section div form {
+  width: 100%;
+  height: 100%;
+  background-color: var(--colte);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.asd__section div form > * {
+  margin: 12px;
+}
+.asd__section div form input {
+  width: 92%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 9px;
+  color: white;
+}
+.asd__section div form span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.asd__section div form span > * {
+  margin-left: 12px;
+  height: 60px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 9px;
+}
+.asd__section div form button {
+  border: none;
+  padding: 22px;
+  background-color: red;
+  align-self: flex-end;
+  display: flex;
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 900px) {
+  .asd__section {
+    display: flex;
+    min-height: 40vh;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .asd__section div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    min-width: 300px;
+    flex-grow: 1;
+    align-items: center;
+    height: 300px;
+    margin: 12px;
+    background-color: whitesmoke;
+  }
+  .asd__section .main__detail {
+    align-items: flex-start;
+    padding-left: 4%;
+  }
+  .asd__section .main__detail b {
+    margin: 12px;
+    font-family: sans-serif;
+  }
+  .asd__section div form {
+    width: 100%;
+    height: 100%;
+    background-color: var(--colte);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .asd__section div form > * {
+    margin: 12px;
+  }
+  .asd__section div form input {
+    width: 92%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 9px;
+    color: white;
+  }
+  .asd__section div form span {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .asd__section div form span > * {
+    margin-left: 12px;
+    height: 60px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 9px;
+  }
+  .asd__section div form button {
+    border: none;
+    padding: 22px;
+    background-color: red;
+    align-self: flex-end;
+    display: flex;
+    color: whitesmoke;
+  }
+}
+.Year__funtion {
+  display: flex;
+  width: 100%;
+  padding: 22px;
+}
+.Year__funtion main {
+  width: 100%;
+}
+.Year__funtion .boxIMg img {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+}
+.Year__funtion .mian__conds {
+  display: flex;
+  flex-direction: column;
+}
+.Year__funtion .mian__conds span {
+  display: flex;
+  margin: 12px;
+  background-color: rgba(128, 128, 128, 0.308);
+  padding: 12px;
+  color: rgb(255, 0, 0);
+  align-items: center;
+}
+.Year__funtion .mian__conds span img {
+  border-radius: 50%;
+}
+.Year__funtion .mian__conds span h4 {
+  text-transform: uppercase;
+}
+.Year__funtion .mian__conds span p {
+  color: var(--colte);
+  font-style: italic;
+}
+.Year__funtion .mian__conds span > * {
+  margin-left: 12px;
+}
+
+@media screen and (max-width: 890px) {
+  .Year__funtion {
+    display: flex;
+    width: 100%;
+    padding: 22px;
+    flex-wrap: wrap;
+  }
+  .Year__funtion main {
+    width: 100%;
+  }
+  .Year__funtion .boxIMg img {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+  }
+  .Year__funtion .mian__conds {
+    display: flex;
+    flex-direction: column;
+  }
+  .Year__funtion .mian__conds span {
+    display: flex;
+    margin: 12px;
+    background-color: rgba(128, 128, 128, 0.308);
+    padding: 12px;
+    color: rgb(255, 0, 0);
+    align-items: center;
+  }
+  .Year__funtion .mian__conds span img {
+    border-radius: 50%;
+  }
+  .Year__funtion .mian__conds span h4 {
+    text-transform: uppercase;
+  }
+  .Year__funtion .mian__conds span p {
+    color: var(--colte);
+    font-style: italic;
+  }
+  .Year__funtion .mian__conds span > * {
+    margin-left: 12px;
+  }
+}
+.cu {
+  cursor: pointer;
+}/*# sourceMappingURL=contact.css.map */

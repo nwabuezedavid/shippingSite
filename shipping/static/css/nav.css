@@ -1,0 +1,199 @@
+.nav {
+  background-color: var(--back2);
+  width: 100%;
+  height: auto;
+  display: flex;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+.nav > * {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav .loho__con {
+  display: flex;
+  height: 120px;
+  align-items: center;
+}
+.nav .loho__con img {
+  display: flex;
+  height: 90%;
+  width: 200px;
+}
+.nav .linkholder {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+}
+.nav .linkholder a {
+  color: var(--conta);
+  text-transform: capitalize;
+  border-bottom: 2px solid var(--conta);
+  padding-bottom: 2px;
+  margin: 12px;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.nav .linkholder a:hover {
+  color: gray;
+}
+
+.toggle {
+  display: none;
+}
+
+@media screen and (max-width: 718px) {
+  .toggle {
+    display: flex;
+    font-size: 45px;
+    cursor: pointer;
+  }
+  .nav {
+    background-color: var(--back2);
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .nav > * {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav .loho__con {
+    display: flex;
+    height: 90px;
+    align-items: center;
+  }
+  .nav .loho__con img {
+    display: flex;
+    height: 80%;
+    width: 170px;
+  }
+  .nav .linkholder {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-backdrop-filter: blur(0.12px);
+            backdrop-filter: blur(0.12px);
+    position: fixed;
+    top: 90px;
+    width: 100%;
+    background-color: rgba(0, 4, 13, 0.87);
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    left: -100vw;
+  }
+  .nav .linkholder a {
+    color: var(--back2);
+    text-transform: capitalize;
+    border-bottom: 2px solid var(--conta);
+    padding-bottom: 2px;
+    margin: 12px;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .nav .linkholder a:hover {
+    color: gray;
+  }
+  .nav .linkholder__clse {
+    left: 0vh;
+    z-index: -99999;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+.open__assistabnce {
+  top: 79%;
+  right: 4%;
+  position: fixed;
+  background: rgba(128, 128, 128, 0);
+  display: flex;
+  align-items: center;
+}
+
+.open__assistabnce big {
+  display: flex;
+  background-color: white;
+  margin-right: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 9px;
+  border-radius: 23px;
+}
+
+.open__assistabnce small {
+  display: flex;
+  font-size: xx-large;
+  background-color: var(--colte);
+  padding: 12px;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.open__assistabnce small b {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: medium;
+  background-color: red;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  right: -8px;
+  top: 0;
+  padding: 8px;
+  width: 12px;
+}
+
+.create__con {
+  position: absolute;
+  right: 12px;
+  margin: 22px;
+}
+.create__con a {
+  border: 2px solid white;
+  background-color: red;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  font-size: x-small;
+  display: flex;
+}/*# sourceMappingURL=nav.css.map */
